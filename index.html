@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        function makeCookie(){
+            let info = prompt("Enter The Cookie Information: ","");
+            document.cookie = "cookie=" + info;
+            alert("Cookie Created!");
+        }
+        function getCookie(){
+            if(!document.cookie){
+                alert("No Cookie Is Here");
+            }
+            else{
+                alert("Cookie here is: " + document.cookie.replace("cookie=",""));
+            }
+            let cookieText = document.cookie;
+            const paragraphy = document.getElementById("MyPara");
+            paragraphy.textContent = cookieText;
+        }
+        function clearCookie(){
+            document.cookie = "cookie=; expires= Sat, 03 Feb 1990 00:00:00 UTC; path=/ "
+            alert("cookie is no more");
+        }
+    </script>
+<body>
+    <section>
+        <h1>Cookie Demonstration!</h1>
+           <h3>To Demonstrate:</h3>
+        Try Make Cookie, Then Get Cookie, Then Clear Cookie, Then Get Cookie<br> </p>
+        <button onclick="makeCookie()">Make cookie</button>
+        <button onclick="clearCookie()">Clear Cookie</button>
+        <button onclick="getCookie()">Get Cookie</button>
+    </section>
+    <footer>Yavuz &copy2023</footer>
+</body>
+
+</html>
